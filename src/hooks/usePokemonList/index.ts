@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useCallback, useEffect, useState } from "react"
 import { PokemonService } from "../../services/pokeapi/pokemon"
 import { PokemonListRequest } from "../../services/pokeapi/pokemon/types"
 
 export const usePokemonList = () => {
   const [loading, setLoading] = useState(false)
-  const [pokemons, setPokemons] = useState([])
+  const [pokemons, setPokemons] = useState<any>([])
   const [filters, setFilters] = useState({
     offset: 0,
     limit: 25
